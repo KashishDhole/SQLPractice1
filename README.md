@@ -1,0 +1,1 @@
+This repository contains my SQL practice exercises covering a wide range of concepts — from basic queries to advanced database operations.It serves as my personal learning and reference space for improving SQL skills, mastering data manipulation, and understanding relational database concepts.
