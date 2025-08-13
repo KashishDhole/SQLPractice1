@@ -1,0 +1,17 @@
+-- Create a view
+CREATE VIEW high_salary_employees AS
+SELECT first_name, last_name, salary
+FROM employees
+WHERE salary > 60000;
+
+-- Use the view
+SELECT * FROM high_salary_employees;
+
+-- Drop view
+DROP VIEW high_salary_employees;
+
+-- Create index
+CREATE INDEX idx_salary ON employees(salary);
+
+-- Drop index
+DROP INDEX idx_salary ON employees;

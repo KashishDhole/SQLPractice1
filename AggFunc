@@ -1,0 +1,22 @@
+-- COUNT
+SELECT COUNT(*) AS total_employees FROM employees;
+
+-- SUM
+SELECT SUM(salary) AS total_salary FROM employees;
+
+-- AVG
+SELECT AVG(salary) AS avg_salary FROM employees;
+
+-- MIN / MAX
+SELECT MIN(salary) AS lowest_salary, MAX(salary) AS highest_salary FROM employees;
+
+-- GROUP BY
+SELECT dept_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY dept_id;
+
+-- HAVING (Filtering after GROUP BY)
+SELECT dept_id, AVG(salary) AS avg_salary
+FROM employees
+GROUP BY dept_id
+HAVING AVG(salary) > 55000;

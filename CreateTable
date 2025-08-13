@@ -1,0 +1,26 @@
+-- Create a table
+CREATE TABLE employees (
+    emp_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    salary DECIMAL(10,2),
+    hire_date DATE
+);
+
+-- Show all tables
+SHOW TABLES;
+
+-- Describe table structure
+DESCRIBE employees;
+
+-- Alter table - Add column
+ALTER TABLE employees ADD email VARCHAR(100);
+
+-- Alter table - Modify column
+ALTER TABLE employees MODIFY salary DECIMAL(12,2);
+
+-- Alter table - Drop column
+ALTER TABLE employees DROP COLUMN email;
+
+-- Drop table
+DROP TABLE employees;

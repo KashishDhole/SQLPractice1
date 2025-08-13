@@ -1,0 +1,32 @@
+-- Create another table for join examples
+CREATE TABLE departments (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+
+INSERT INTO departments VALUES
+(1, 'HR'), (2, 'Finance'), (3, 'Engineering');
+
+-- INNER JOIN
+SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+INNER JOIN departments d ON e.emp_id = d.dept_id;
+
+-- LEFT JOIN
+SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+LEFT JOIN departments d ON e.emp_id = d.dept_id;
+
+-- RIGHT JOIN
+SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+RIGHT JOIN departments d ON e.emp_id = d.dept_id;
+
+-- FULL OUTER JOIN (Some DBs need UNION of LEFT & RIGHT)
+SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+LEFT JOIN departments d ON e.emp_id = d.dept_id
+UNION
+SELECT e.first_name, e.last_name, d.dept_name
+FROM employees e
+RIGHT JOIN departments d ON e.emp_id = d.dept_id;

@@ -1,0 +1,11 @@
+-- Start transaction
+START TRANSACTION;
+
+UPDATE employees SET salary = salary + 5000 WHERE emp_id = 1;
+DELETE FROM employees WHERE emp_id = 2;
+
+-- Commit changes
+COMMIT;
+
+-- Or rollback changes
+ROLLBACK;

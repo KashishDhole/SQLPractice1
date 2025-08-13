@@ -1,0 +1,19 @@
+-- UNION (Unique values)
+SELECT first_name FROM employees
+UNION
+SELECT dept_name FROM departments;
+
+-- UNION ALL (Includes duplicates)
+SELECT first_name FROM employees
+UNION ALL
+SELECT dept_name FROM departments;
+
+-- INTERSECT (Common values) - Not supported in all DBs
+SELECT first_name FROM employees
+INTERSECT
+SELECT dept_name FROM departments;
+
+-- EXCEPT / MINUS
+SELECT first_name FROM employees
+EXCEPT
+SELECT dept_name FROM departments;

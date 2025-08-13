@@ -1,0 +1,12 @@
+-- Subquery in WHERE
+SELECT first_name, salary
+FROM employees
+WHERE salary > (SELECT AVG(salary) FROM employees);
+
+-- Subquery in FROM (Derived Table)
+SELECT dept_avg.dept_id, dept_avg.avg_salary
+FROM (
+    SELECT dept_id, AVG(salary) AS avg_salary
+    FROM employees
+    GROUP BY dept_id
+) AS dept_avg;

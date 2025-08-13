@@ -1,0 +1,23 @@
+-- WHERE clause
+SELECT * FROM employees WHERE salary > 55000;
+
+-- AND, OR, NOT
+SELECT * FROM employees WHERE salary > 50000 AND hire_date > '2020-01-01';
+
+-- BETWEEN
+SELECT * FROM employees WHERE salary BETWEEN 50000 AND 65000;
+
+-- IN
+SELECT * FROM employees WHERE emp_id IN (1, 2);
+
+-- LIKE (Pattern Matching)
+SELECT * FROM employees WHERE first_name LIKE 'J%';
+
+-- IS NULL / IS NOT NULL
+SELECT * FROM employees WHERE email IS NULL;
+
+-- ORDER BY
+SELECT * FROM employees ORDER BY salary DESC;
+
+-- LIMIT
+SELECT * FROM employees ORDER BY salary DESC LIMIT 5;

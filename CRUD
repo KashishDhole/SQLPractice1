@@ -1,0 +1,20 @@
+-- Insert data
+INSERT INTO employees (emp_id, first_name, last_name, salary, hire_date)
+VALUES (1, 'John', 'Doe', 50000.00, '2020-01-15');
+
+-- Insert multiple rows
+INSERT INTO employees VALUES
+(2, 'Jane', 'Smith', 60000.00, '2019-03-10'),
+(3, 'Mike', 'Brown', 55000.00, '2021-06-25');
+
+-- Read data
+SELECT * FROM employees;
+
+-- Update data
+UPDATE employees
+SET salary = 65000.00
+WHERE emp_id = 2;
+
+-- Delete data
+DELETE FROM employees
+WHERE emp_id = 3;
